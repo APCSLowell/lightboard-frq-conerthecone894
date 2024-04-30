@@ -37,8 +37,8 @@ public class LightBoard
 //==================================================================================
     int on = 0;
 
-    for(int r = 0; r < lights[col].length; r++){
-      if (lights[r][col] == true)
+    for(int i = 0; i < lights[col].length; i++){
+      if (lights[i][col] == true)
         on++;
     }
     
@@ -70,10 +70,12 @@ public class LightBoard
     for (int r = 0; r < lights.length; r++)
     {
       for (int c = 0; c < lights[0].length; c++)
+        {
         if (lights[r][c])
           s += "*";
         else
           s += ".";
+        }
       s += "\n";
     }
     return s;
